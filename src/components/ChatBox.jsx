@@ -74,14 +74,17 @@ export default function ChatBox({ autoPrompt = "" }) {
           </div>
         ))}
       </div>
-      <form onSubmit={handleSubmit} className="flex gap-2">
+      <form onSubmit={handleSubmit} className="flex gap-2 w-full">
         <input
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          className="flex-1 p-2 border rounded dark:bg-[#0b1120]"
+          className="flex-1 p-2 border rounded dark:bg-[#0b1120] w-full"
           placeholder="Ask me anything..."
         />
-        <button className="bg-green-600 text-white px-4 rounded hover:bg-green-500">
+        <button
+          type="submit"
+          className="bg-green-600 text-white px-4 rounded hover:bg-green-500 flex-shrink-0"
+        >
           Send
         </button>
       </form>
