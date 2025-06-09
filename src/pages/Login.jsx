@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Axios from "axios";
 import { useNavigate } from "react-router-dom";
 
+const backend_url = import.meta.env.VITE_BACKEND_URL;
+
 export default function Login() {
   const [email, setEmail] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -15,7 +17,7 @@ export default function Login() {
   Axios.defaults.withCredentials = true;
   const handleSubmit = (e) => {
     e.preventDefault();
-    Axios.post("http://localhost:3000/auth/login", {
+    Axios.post(`${backend_url}/auth/login`, {
       email,
       password,
     })

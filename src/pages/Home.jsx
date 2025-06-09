@@ -5,7 +5,8 @@ import ChatBox from "../components/ChatBox";
 import About from "./About";
 import Contact from "./Contact";
 import ImageSlider from "../components/ImageSlider";
-import Categories from "../components/Categories";
+
+const backend_ml_url = import.meta.env.VITE_BACKEND_ML_URL;
 
 export default function Home() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -54,7 +55,7 @@ export default function Home() {
       const formData = new FormData();
       formData.append("file", file);
 
-      const res = await Axios.post("http://localhost:8000/predict", formData, {
+      const res = await Axios.post(`${backend_ml_url}/predict`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 

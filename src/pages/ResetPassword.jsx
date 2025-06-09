@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 
+const backend_url = import.meta.env.VITE_BACKEND_URL;
+
 const ResetPassword = () => {
   const [password, setPassword] = useState("");
   const { token } = useParams();
@@ -9,7 +11,7 @@ const ResetPassword = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    Axios.post("http://localhost:3000/auth/reset-password/" + token, {
+    Axios.post(`${backend_url}/auth/reset-password/` + token, {
       password,
     })
       .then((res) => {

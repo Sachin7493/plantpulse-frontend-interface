@@ -10,7 +10,6 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
-import ImageSlider from "./components/ImageSlider";
 
 export default function App() {
   return (

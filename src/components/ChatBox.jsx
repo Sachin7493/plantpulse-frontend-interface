@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
 
+const backend_url = import.meta.env.VITE_BACKEND_URL;
+
 export default function ChatBox({ autoPrompt = "" }) {
   const [message, setMessage] = useState("");
   const [conversation, setConversation] = useState([
@@ -17,7 +19,7 @@ export default function ChatBox({ autoPrompt = "" }) {
           { type: "user", text: autoPrompt },
         ]);
         try {
-          const res = await Axios.post("http://localhost:3000/api/ask", {
+          const res = await Axios.post(`${backend_url}/api/ask`, {
             prompt: autoPrompt,
           });
           const botMsg = { type: "bot", text: res.data.response };
@@ -43,7 +45,7 @@ export default function ChatBox({ autoPrompt = "" }) {
     setMessage("");
 
     try {
-      const res = await Axios.post("http://localhost:3000/api/ask", {
+      const res = await Axios.post(`${backend_url}/api/ask`, {
         prompt: message,
       });
       const botMsg = { type: "bot", text: res.data.response };

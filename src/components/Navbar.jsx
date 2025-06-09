@@ -3,6 +3,8 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useTheme } from "./ThemeContext";
 import Axios from "axios";
 
+const backend_url = import.meta.env.VITE_BACKEND_URL;
+
 export default function Navbar() {
   const { darkMode, setDarkMode } = useTheme();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -18,7 +20,7 @@ export default function Navbar() {
 
   const handleLogout = () => {
     localStorage.removeItem("auth");
-    Axios.get("http://localhost:3000/auth/logout")
+    Axios.get(`${backend_url}/auth/logout`)
       .then(() => {
         setIsLoggedIn(false);
         navigate("/");
