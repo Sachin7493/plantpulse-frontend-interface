@@ -32,14 +32,13 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-green-600 text-white px-4 py-3 shadow-md">
-      <div className="flex justify-between items-center">
-        <h1 className="font-bold text-xl">
-          🌿 PlantPulse
-          <span className="hidden md:inline font-medium text-sm ml-4 text-orange-600">
+      <div className="flex justify-between items-center relative">
+        <h1 className="font-bold text-xl">🌿 PlantPulse</h1>
+        <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2">
+          <span className="font-extrabold text-orange-500 text-lg">
             ॐ श्री हनुमते नमः
           </span>
-        </h1>
-
+        </div>
         <div className="flex items-center space-x-4">
           <div className="hidden md:flex space-x-4 items-center">
             <Link to="/" className="hover:text-green-200 hover:shadow">
