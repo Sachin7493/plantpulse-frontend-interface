@@ -34,11 +34,12 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 w-full z-50 bg-green-600 text-white px-4 py-3 shadow-md">
       <div className="flex justify-between items-center">
         <h1 className="font-bold text-xl">
-          🌿 PlantPulse{" "}
+          🌿 PlantPulse
           <span className="hidden md:inline font-medium text-sm ml-4 text-orange-600">
             ॐ श्री हनुमते नमः
           </span>
         </h1>
+
         <div className="flex items-center space-x-4">
           <div className="hidden md:flex space-x-4 items-center">
             <Link to="/" className="hover:text-green-200 hover:shadow">
@@ -72,7 +73,6 @@ export default function Navbar() {
             )}
           </div>
 
-          {/* Always Visible: Theme toggle + Mobile menu button */}
           <button
             onClick={() => setDarkMode(!darkMode)}
             className="text-white hover:text-yellow-300 transition-colors"
@@ -81,7 +81,6 @@ export default function Navbar() {
             {darkMode ? "☀️" : "🌙"}
           </button>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="md:hidden text-2xl"
@@ -92,7 +91,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {menuOpen && (
         <div className="md:hidden flex flex-col mt-2 space-y-2">
           <Link
