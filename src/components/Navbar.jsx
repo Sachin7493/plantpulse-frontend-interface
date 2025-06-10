@@ -37,7 +37,7 @@ export default function Navbar() {
           <h1 className="text-white font-bold text-sm sm:text-base md:text-xl lg:text-2xl whitespace-nowrap">
             🌿 PlantPulse
           </h1>
-          <div className="absolute left-1/2 top-1/2 -translate-x-[calc(50%-45px)] -translate-y-1/2">
+          <div className="absolute left-1/2 top-1/2 -translate-x-[calc(50%-60px)] -translate-y-1/2">
             <span className="text-orange-500 font-bold text-xs sm:text-sm md:text-lg lg:text-xl whitespace-nowrap">
               ॐ श्री हनुमते नमः
             </span>
