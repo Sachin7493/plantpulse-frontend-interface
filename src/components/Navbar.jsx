@@ -33,16 +33,22 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-green-600 text-white px-4 py-3 shadow-md">
       <div className="flex justify-between items-center relative">
-        <div className="flex justify-between items-center relative w-full">
-          <div className="absolute left-0 md:left-4 lg:left-8">
-            <h1 className="font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl text-white">
+        <div className="flex justify-center items-center relative w-full">
+          <div className="hidden md:block absolute left-4">
+            <h1 className="font-bold text-2xl lg:text-3xl text-white">
               🌿 PlantPulse
             </h1>
           </div>
-          <div className="absolute left-1/2 transform -translate-x-1/2">
+
+          <div className="text-center">
             <span className="text-orange-500 font-bold text-sm sm:text-base md:text-lg lg:text-xl whitespace-nowrap">
               ॐ श्री हनुमते नमः
             </span>
+          </div>
+          <div className="block md:hidden absolute left-4">
+            <h1 className="font-bold text-lg sm:text-xl text-white">
+              🌿 PlantPulse
+            </h1>
           </div>
         </div>
         <div className="flex items-center space-x-4">
