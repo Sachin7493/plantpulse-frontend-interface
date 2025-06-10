@@ -33,24 +33,29 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-green-600 text-white px-4 py-3 shadow-md">
       <div className="flex justify-between items-center relative">
-        <div className="flex justify-center items-center relative w-full">
-          <div className="hidden md:block absolute left-4">
-            <h1 className="font-bold text-2xl lg:text-3xl text-white">
+        <div className="relative w-full py-1">
+          <div className="hidden md:flex items-center justify-center relative">
+            <div className="absolute left-4">
+              <h1 className="text-white font-bold text-xl lg:text-2xl xl:text-3xl">
+                🌿 PlantPulse
+              </h1>
+            </div>
+            <div>
+              <span className="text-orange-500 font-bold text-base lg:text-lg xl:text-xl whitespace-nowrap">
+                ॐ श्री हनुमते नमः
+              </span>
+            </div>
+          </div>
+          <div className="flex flex-col items-center md:hidden space-y-1">
+            <h1 className="text-white font-bold text-lg sm:text-xl">
               🌿 PlantPulse
             </h1>
-          </div>
-
-          <div className="text-center">
-            <span className="text-orange-500 font-bold text-sm sm:text-base md:text-lg lg:text-xl whitespace-nowrap">
+            <span className="text-orange-500 font-bold text-sm sm:text-base whitespace-nowrap">
               ॐ श्री हनुमते नमः
             </span>
           </div>
-          <div className="block md:hidden absolute left-4">
-            <h1 className="font-bold text-lg sm:text-xl text-white">
-              🌿 PlantPulse
-            </h1>
-          </div>
         </div>
+
         <div className="flex items-center space-x-4">
           <div className="hidden md:flex space-x-4 items-center">
             <Link to="/" className="hover:text-green-200 hover:shadow">
