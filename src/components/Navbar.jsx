@@ -33,13 +33,15 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-green-600 text-white px-4 py-3 shadow-md">
       <div className="flex justify-between items-center relative">
-        <div className="relative w-full flex items-center">
+        <div className="relative w-full flex items-center justify-between">
           <h1 className="font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl text-white">
             🌿 PlantPulse
           </h1>
-          <span className="absolute left-1/2 transform -translate-x-1/2 hidden md:inline font-bold text-orange-500 text-sm sm:text-base md:text-lg lg:text-xl whitespace-nowrap">
-            ॐ श्री हनुमते नमः
-          </span>
+          <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
+            <span className="hidden md:inline font-bold text-orange-500 text-sm sm:text-base md:text-lg lg:text-xl whitespace-nowrap">
+              ॐ श्री हनुमते नमः
+            </span>
+          </div>
         </div>
         <div className="flex items-center space-x-4">
           <div className="hidden md:flex space-x-4 items-center">
