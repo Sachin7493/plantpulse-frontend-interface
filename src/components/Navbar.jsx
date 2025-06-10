@@ -34,19 +34,25 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 w-full z-50 bg-green-600 text-white px-4 py-3 shadow-md">
       <div className="flex justify-between items-center relative">
         <div className="relative w-full py-1">
-          <div className="hidden md:flex items-center justify-center relative">
-            <div className="absolute left-4">
+          {/* Desktop View */}
+          <div className="hidden md:block relative w-full h-12">
+            {/* Left Logo */}
+            <div className="absolute left-4 top-1/2 -translate-y-1/2">
               <h1 className="text-white font-bold text-xl lg:text-2xl xl:text-3xl">
                 🌿 PlantPulse
               </h1>
             </div>
-            <div>
+
+            {/* Center Mantra */}
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
               <span className="text-orange-500 font-bold text-base lg:text-lg xl:text-xl whitespace-nowrap">
                 ॐ श्री हनुमते नमः
               </span>
             </div>
           </div>
-          <div className="flex flex-col items-center md:hidden space-y-1">
+
+          {/* Mobile View */}
+          <div className="flex flex-col items-center justify-center md:hidden space-y-1">
             <h1 className="text-white font-bold text-lg sm:text-xl">
               🌿 PlantPulse
             </h1>
