@@ -33,7 +33,7 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-green-600 text-white px-4 py-2 shadow-md">
       <div className="flex justify-between items-center relative">
-        <div className="w-full h-8 flex items-center justify-between px-4 relative">
+        <div className="w-full h-9 flex items-center justify-between px-4 relative">
           <h1 className="text-white font-bold text-base sm:text-lg md:text-2xl lg:text-3xl whitespace-nowrap">
             🌿 PlantPulse
           </h1>
